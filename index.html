@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Venom - Your #1 Source For Roblox</title>
+</head>
+<body>
+    <div id="popup">
+        <div id="popup-content">
+            <img class="stop" src="R.f95c284fb11fed61e2de62da425ad0.png" alt="Stop Icon">
+            <p>By clicking "Okay," you agree that you are solely responsible for any risks that can happen when downloading Roblox Exploits, including potential viruses, Account Bans, or damages done to your device. Please look at our <a href="test.html">About</a> section to see the types of Virus that can occur. With this in mind Venom will not claim liability for User damage that may come from downloading and using any related Roblox Exploiting software.</p>
+            <label>
+                <input type="checkbox" id="do-not-show-again"> Do not show again
+            </label>
+            <br>
+            <button id="popup-button">Okay</button>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="navbar">
+            <a href="">Products</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+            <a href="term.html">About</a>
+        </div>
+        
+        <div class="testingele">
+            <h1>Venom <br><br> Your #1 Source For Roblox Exploit News</h1>
+            <h2>We bring you the most recent news about Roblox Exploits.</h2>
+        </div>
+            
+        <a href="#" class="button">View Online Exploits</a>
+
+        <div class="products-container">
+            <div class="box">
+                <img src="9a98ef4c-83aa-4b1e-90df-3d34809c3e2e.webp" alt="Product Image" class="box-image">
+                <div class="box-description">
+                    <h3>Codex (Mobile Executor)</h3>
+                    <p style="opacity: .2;">Lorem ipsum dolor sit, </p>
+                </div>
+                <a href="#" class="box-button">Learn How to Download</a>
+            </div>
+
+            <!-- New Box -->
+            <div class="box">
+                <img src="Screenshot 2024-07-01 182758.png" alt="Product Image" class="box-image">
+                <div class="box-description">
+                    <h3>Vega x (Mobile Executor)</h3>
+                    <p style="opacity: .2;">Lorem ipsum dolor sit, </p>
+                </div>
+                <a href="#" class="box-button">Learn how to download</a>
+            </div>
+        </div>                  
+        
+        <!-- CONTACT -->
+
+        <!-- Join section -->
+        <div class="join">
+            <section class="join-section">
+                <h2>Support us</h2>
+                <p>You can support us by following us on our socials!</p>    
+                <a href="#"><button>Contact us</button></a>
+            </section>
+
+            <section class="join-section">
+                <h2>Copyright</h2>
+                <p>We're here and happy to help you with anything you need.</p>
+                <a href="#"><button>Contact us</button></a>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Check for the popup preference before the DOM is fully loaded
+        if (localStorage.getItem('doNotShowPopup') === 'true' || sessionStorage.getItem('doNotShowPopup') === 'true') {
+            document.documentElement.classList.add('allow-scroll'); // Enable scrolling
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (localStorage.getItem('doNotShowPopup') === 'true' || sessionStorage.getItem('doNotShowPopup') === 'true') {
+                document.getElementById('popup').style.display = 'none';
+                document.body.classList.add('allow-scroll'); // Enable scrolling
+            }
+
+            document.getElementById('popup-button').addEventListener('click', function() {
+                if (document.getElementById('do-not-show-again').checked) {
+                    localStorage.setItem('doNotShowPopup', 'true');
+                } else {
+                    sessionStorage.setItem('doNotShowPopup', 'true');
+                }
+                document.getElementById('popup').style.display = 'none';
+                document.body.classList.add('allow-scroll'); // Enable scrolling
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,436 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto';
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(17, 19, 20); 
+  color: #fff; /* White text */
+  overflow: hidden; /* Disable scrolling initially */
+}
+
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.915);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+#popup-content {
+  opacity: 1;
+  width: 19%;
+  background: #171717;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Add this CSS rule for the checkbox */
+#popup-content label {
+  display: block;
+  margin: 15px 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+
+
+#popup-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #323232;
+  border: none;
+  color: inherit;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 60%;
+  transition: background-color 0.3s;
+}
+
+#popup-button:hover {
+  background-color: #2c2c2c;
+}
+
+#popup-content a {
+  color: #ffffff;
+  opacity: 1;
+  text-decoration: underline;
+}
+
+#popup-content p {
+  color: #ffffff;
+  opacity: .8;
+}
+
+#popup-content h2 {
+  font-size: 1.6rem;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  line-height: 1.75rem;
+  font-weight: 800;
+  opacity: 1;
+  color: red;
+}
+
+body.allow-scroll {
+  overflow: auto; /* Enable scrolling when class is added */
+}
+
+/* P H1 H2 H3 ELEMENTS CSS */
+p {
+  font-size: .899rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 15px;
+}
+
+h1 {
+  line-height: 1;
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  opacity: .5;
+}
+
+h3 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+/* END ELEMENT CSS */
+
+/* NAVBAR CSS */
+.navbar {
+  top: 0; 
+  width: 100%; 
+  display: flex;
+  justify-content: center; 
+  background-color: rgb(17, 19, 20); 
+  padding: 20px;
+  position: sticky;
+  z-index: 1000; 
+}
+
+.navbar a {
+  color: #fff;
+  padding: 10px 15px;
+  margin: 0 5px;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: rgb(228, 228, 228);
+}
+
+/* END NAVBAR CSS */
+
+/* MAIN CSS CONTENTS */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  margin-top: 20px;
+  padding: 20px;
+}
+/* END MAIN CONTENTS CSS */ 
+
+.testingele {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.testingele h2 {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* VERIFIED CSS ICON */
+.verified-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2a2a2a; 
+  padding: 10px 20px;
+  border-radius: 70px;
+  margin-bottom: 20px;
+}
+
+.verified {
+  display: flex;
+  align-items: center;
+}
+
+.verified-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.verified-text {
+  font-size: 13px;
+  font-weight: 600;
+}
+/* END VERIFIED CSS ICON */
+
+/* INFO CSS START */
+.info-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  background-color: #2a2a2a;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.info-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+/* END INFO CSS */
+
+/* BUTTONS CSS */
+.button { /* NOT THE RIGHT BUTTON!!! */
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover,
+.box-button:hover,
+.join-section button:hover,
+.button:focus,
+.box-button:focus,
+.join-section button:focus {
+  background-color: #272727;
+  color: #f0f0f0;
+}
+
+/* Specific styling for links inside join-section */
+.join-section a {
+  color: inherit; /* Inherit parent color */
+  text-decoration: none;
+}
+/* END BUTTONS CSS */
+
+/* PRODUCT CONTAINER */
+.products-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  margin: 60px auto;
+}
+/* PRODUCT CONTAINER END */
+
+/* BOX INSIDE PRODUCT CONTAINER */
+.box {
+  width: 18rem; 
+  height: 23rem; 
+  text-align: left;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.box:hover {
+  border-color: rgba(255, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.box-description {
+  padding: 10px;
+}
+
+.box-button {
+  display: block;
+  width: 78%;
+  height: 50px;
+  padding-top: 15px;
+  bottom: 5px;
+  background-color: #3f3f3f98;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  opacity: .8;
+  position: relative;
+  transition: background-color 0.3s;
+  text-align: center;
+  align-self: center;
+}
+
+.box-button:hover {
+  background-color: #31313172;
+}
+/* END BOX INSIDE PRODUCT CONTAINER */
+
+/* IMG CSS */
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+/* END IMG CSS */
+
+/* CONTACT SECTION CSS */
+.contact-section {
+  width: 70%;
+  text-align: center;
+  padding: 40px 0;
+  background-color: #1a1a1aa5;
+  color: white;
+}
+
+.contact {
+  width: 100%;
+  margin: 20px auto;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  height: fit-content;
+}
+
+.contact button {
+  padding: 10px 20px;
+  background-color: #26e07f;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-section h2 {
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  margin-bottom: 20px;
+}
+
+.contact-section button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-section button:hover {
+  background-color: #22c06e;
+}
+
+.contact-section a {
+  color: inherit;
+  text-decoration: none;
+}
+/* END CONTACT CSS */
+
+/* JOIN SECTION */
+.join { /* container */
+  width: 100%;
+  color: white;
+  opacity: 1;
+}
+
+.join h2 {
+  opacity: 1;
+}
+
+.join p {
+  opacity: 1;
+}
+
+.join-section {
+  border-top: 2px solid rgb(29, 29, 29);
+  border-bottom: 1px solid rgb(29, 29, 29);
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+  background-color: #1a1a1a00;
+  color: white;
+}
+
+.join-section button {
+  padding: 10px 20px;
+  background-color: #26e07f;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.join-section a {
+  color: inherit;
+  text-decoration: none;
+}
+/* END JOIN SECTION */
+
+/* Important css */
+.important {
+  margin: 0;
+  text-align: center;
+}
+
+.important a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+::selection {
+   color: rgb(185, 0, 0);
+}
+
+.stop {
+  width: 75px;
+}
